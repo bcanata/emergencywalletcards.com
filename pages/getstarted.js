@@ -238,7 +238,7 @@ export default function GetStarted() {
             var doc = new jsPDF({
               orientation: 'p',
               unit: 'mm',
-              format: 'letter',
+              format: [297, 210],
               putOnlyUsedFonts:true,
               compress: true,
               precision: 2,
@@ -261,22 +261,22 @@ export default function GetStarted() {
             doc.setFontSize(6)
             // add cut and fold instructions
             doc.addImage(ewc_fold_example_png, 'PNG', 5, 14, 46, 36)
-            doc.text("CUT ALONG THE OUTER BORDER",5,55)
-            doc.text("FOLD ALONG THE INNER BORDER",5,58)
-            doc.text("FEEL FREE TO ADD MORE INFO ON THE BACK!",5,65)
-            doc.text("TELL US HOW WE CAN IMPROVE THIS CARD AT:",5,68)
+            doc.text("DIŞ ÇERÇEVESİNDEN KESİN",5,55)
+            doc.text("İÇ ÇERÇEVELERDEN KATLAYIN",5,58)
+            doc.text("ARKA KISMA EKSTRA BİLGİ EKLEYEBİLİRSİNİZ!",5,65)
+            doc.text("BU KARTI GELİŞTİRMEK İÇİN FİKRİNİZ VARSA:",5,68)
             doc.text("https://emergencywalletcards.com/issues",5,71)
             doc.addImage(ewc_scissors_png, 'PNG', 100, 5, 6, 4)
             doc.addImage(ewc_scissors_png, 'PNG', 100, 262, 6, 4)
-            doc.text("<FOLD HERE>",44,60)
-            doc.text("<FOLD HERE>",44,110)
-            doc.text("<FOLD HERE>",44,160)
-            doc.text("<FOLD HERE>",44,210)
+            doc.text("<BURADAN KATLAYIN>",44,60)
+            doc.text("<BURADAN KATLAYIN>",44,110)
+            doc.text("<BURADAN KATLAYIN>",44,160)
+            doc.text("<BURADAN KATLAYIN>",44,210)
             // card 1
             doc.addImage(ewc_logo_mono_png, 'PNG', 65, 14, 30, 7)
             doc.setFont("Times","bold")
-            doc.text("Personal Info",140,20,null,null,"right")
-            doc.text("Name:",65,25);
+            doc.text("Kişisel Bilgiler",140,20,null,null,"right")
+            doc.text("Adı:",65,25);
             doc.setFont("Times","normal")
             doc.text(`${values.fullName}`, 72, 25)
             doc.setFont("Times","bold")
@@ -285,28 +285,28 @@ export default function GetStarted() {
             doc.text(`${values.dob}`,126,25)
             doc.line(65, 26, 140, 26)
             doc.setFont("Times","bold")
-            doc.text("Address 1:", 65, 28);
+            doc.text("Adres 1:", 65, 28);
             doc.setFont("Times","normal")
             doc.text(`${values.address1}`, 75, 28)
             doc.setFont("Times","bold")
-            doc.text("State:", 110, 28)
+            doc.text("Şehir:", 110, 28)
             doc.setFont("Times","normal")
             doc.text(`${values.address1State}`, 116, 28)
             doc.setFont("Times","bold")
-            doc.text("ZIP:", 120, 28)
+            doc.text("Posta Kodu:", 120, 28)
             doc.setFont("Times","normal")
             doc.text(`${values.address1Zip}`, 125, 28)
             doc.line(65, 29, 140, 29)
             doc.setFont("Times","bold")
-            doc.text("Address 2:", 65, 31);
+            doc.text("Adres 2:", 65, 31);
             doc.setFont("Times","normal")
             doc.text(`${values.address2}`, 75, 31)
             doc.setFont("Times","bold")
-            doc.text("State:", 110, 31)
+            doc.text("Şehir:", 110, 31)
             doc.setFont("Times","normal")
             doc.text(`${values.address2State}`, 116, 31)
             doc.setFont("Times","bold")
-            doc.text("ZIP:", 120, 31)
+            doc.text("Posta Kodu:", 120, 31)
             doc.setFont("Times","normal")
             doc.text(`${values.address2Zip}`, 125, 31)
             doc.line(65, 32, 140, 32)
@@ -324,12 +324,12 @@ export default function GetStarted() {
             doc.setFont("Times","normal")
             doc.text(`${values.cellPhone}`, 76, 37)
             doc.setFont("Times","bold")
-            doc.text("Other Email:", 100, 37);
+            doc.text("Diğer Email:", 100, 37);
             doc.setFont("Times","normal")
             doc.text(`${values.otherEmail}`, 112, 37)
             doc.line(65, 38, 140, 38)
             doc.setFont("Times","bold")
-            doc.text("Important Information:", 65, 40);
+            doc.text("Önemli Bilgiler:", 65, 40);
             doc.setFont("Times","normal")
             doc.line(65,44,140,44)
             doc.text(`${values.information1}`, 65, 43)
@@ -341,21 +341,21 @@ export default function GetStarted() {
             doc.text(`${values.information4}`, 65, 52)
             // card 2
             doc.setFont("Times","bold")
-            doc.text("Work",140,65,null,null,"right")
-            doc.text("Business Name:", 65, 70);
+            doc.text("İş",140,65,null,null,"right")
+            doc.text("İş Yeri Adı:", 65, 70);
             doc.setFont("Times","normal")
             doc.text(`${values.businessName}`,80,70)
             doc.line(65, 71, 140, 71)
             doc.setFont("Times","bold")
-            doc.text("Address 1:", 65, 73);
+            doc.text("Adres 1:", 65, 73);
             doc.setFont("Times","normal")
             doc.text(`${values.businessAddress}`, 75, 73)
             doc.setFont("Times","bold")
-            doc.text("State:", 110, 73)
+            doc.text("Şehir:", 110, 73)
             doc.setFont("Times","normal")
             doc.text(`${values.businessAddressState}`, 115, 73)
             doc.setFont("Times","bold")
-            doc.text("ZIP:", 120, 73)
+            doc.text("Posta Kodu:", 120, 73)
             doc.setFont("Times","normal")
             doc.text(`${values.businessAddressZip}`,125,73)
             doc.line(65, 74, 140, 74)
@@ -373,7 +373,7 @@ export default function GetStarted() {
             doc.text(`${values.workPointOfContact2}`,65,86)
             doc.line(65, 87, 140, 87)
             doc.setFont("Times","bold")
-            doc.text("Work Emergency Plan:", 65, 89);
+            doc.text("İş Acil Durum Planı:", 65, 89);
             doc.setFont("Times","normal")
             doc.line(65,90,140,90)
             doc.text(`${values.workEmergencyPlan1}`,65,92)
