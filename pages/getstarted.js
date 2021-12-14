@@ -8,12 +8,12 @@ import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, Ac
 
 const formSchema = Yup.object().shape({
   fullName: Yup.string().max(50, '50 karakterden daha az uzunlukta olmalıdır.'),
-  dob: Yup.string().matches(/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/, 'YYYY-AA-GG şeklinde yazılmalıdır.'),
+  dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYY şeklinde yazılmalıdır.'),
   address1: Yup.string().max(36, '36 karakterden daha az uzunlukta olmalıdır.'),
-  address1State: Yup.string().length(2, 'Must be 2-letter State/Province abbreviation'),
+  address1State: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
   address1Zip: Yup.string(),
   address2: Yup.string().max(36, '36 karakterden daha az uzunlukta olmalıdır.'),
-  address2State: Yup.string().length(2, 'Must be 2-letter State/Province abbreviation'),
+  address2State: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
   address2Zip: Yup.string(),
   homePhone: Yup.string().max(24, '24 karakterden daha az uzunlukta olmalıdır.'),
   cellPhone: Yup.string().max(24, '24 karakterden daha az uzunlukta olmalıdır.'),
@@ -25,7 +25,7 @@ const formSchema = Yup.object().shape({
   information4: Yup.string().max(80, '80 karakterden daha az uzunlukta olmalıdır.'),
   businessName: Yup.string().max(64, '64 karakterden daha az uzunlukta olmalıdır.'),
   businessAddress: Yup.string().max(36, '36 karakterden daha az uzunlukta olmalıdır.'),
-  businessAddressState: Yup.string().length(2, 'Must be 2-letter State/Province abbreviation'),
+  businessAddressState: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
   businessAddressZip: Yup.string(),
   officePhone: Yup.string().max(66, '66 karakterden daha az uzunlukta olmalıdır.'),
   workPointOfContact1: Yup.string().max(80, '80 karakterden daha az uzunlukta olmalıdır.'),
@@ -35,24 +35,24 @@ const formSchema = Yup.object().shape({
   workEmergencyPlan3: Yup.string().max(80, '80 karakterden daha az uzunlukta olmalıdır.'),
   workEmergencyPlan4: Yup.string().max(80, '80 karakterden daha az uzunlukta olmalıdır.'),
   child1Name: Yup.string().max(30, '30 karakterden daha az uzunlukta olmalıdır.'),
-  child1Dob: Yup.string().matches(/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/, 'Must be YYYY-MM-DD'),
-  child1Sex: Yup.string().length(1, 'Must be 1-letter sex designation, eg M, F, X.'),
+  child1Dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYY şeklinde yazılmalıdır.'),
+  child1Sex: Yup.string().length(1, 'Tek harf şeklinde yazılmalıdır, ör. E, K, X.'),
   child1IdentifyingCharacteristics: Yup.string().max(54, '54 karakterden daha az uzunlukta olmalıdır.'),
   child1School: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
   child1SchoolAddress: Yup.string().max(30, '30 karakterden daha az uzunlukta olmalıdır.'),
   child1SchoolPhone: Yup.string().max(22, '22 karakterden daha az uzunlukta olmalıdır.'),
   child1CellPhone: Yup.string().max(32, '32 karakterden daha az uzunlukta olmalıdır.'),
   child2Name: Yup.string().max(30, '30 karakterden daha az uzunlukta olmalıdır.'),
-  child2Dob: Yup.string().matches(/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/, 'Must be YYYY-MM-DD'),
-  child2Sex: Yup.string().length(1, 'Must be 1-letter sex designation, eg M, F, X.'),
+  child2Dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYY şeklinde yazılmalıdır.'),
+  child2Sex: Yup.string().length(1, 'Tek harf şeklinde yazılmalıdır, ör. E, K, X.'),
   child2IdentifyingCharacteristics: Yup.string().max(54, '54 karakterden daha az uzunlukta olmalıdır.'),
   child2School: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
   child2SchoolAddress: Yup.string().max(30, '30 karakterden daha az uzunlukta olmalıdır.'),
   child2SchoolPhone: Yup.string().max(22, '22 karakterden daha az uzunlukta olmalıdır.'),
   child2CellPhone: Yup.string().max(32, '32 karakterden daha az uzunlukta olmalıdır.'),
   child3Name: Yup.string().max(30, '30 karakterden daha az uzunlukta olmalıdır.'),
-  child3Dob: Yup.string().matches(/^[0-9]{4}-[0-9]{2}-[0-9]{2}$/, 'Must be YYYY-MM-DD'),
-  child3Sex: Yup.string().length(1, 'Must be 1-letter sex designation, eg M, F, X.'),
+  child3Dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYY şeklinde yazılmalıdır.'),
+  child3Sex: Yup.string().length(1, 'Tek harf şeklinde yazılmalıdır, ör. E, K, X.'),
   child3IdentifyingCharacteristics: Yup.string().max(54, '54 karakterden daha az uzunlukta olmalıdır.'),
   child3School: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
   child3SchoolAddress: Yup.string().max(30, '30 karakterden daha az uzunlukta olmalıdır.'),
@@ -60,19 +60,19 @@ const formSchema = Yup.object().shape({
   child3CellPhone: Yup.string().max(32, '32 karakterden daha az uzunlukta olmalıdır.'),
   neighborhoodEmergencyMeetingPlaceName: Yup.string().max(72, '72 karakterden daha az uzunlukta olmalıdır.'),
   neighborhoodEmergencyMeetingPlaceAddress: Yup.string().max(28, '28 karakterden daha az uzunlukta olmalıdır.'),
-  neighborhoodEmergencyMeetingPlaceState: Yup.string().length(2, 'Must be 2-letter State/Province abbreviation'),
+  neighborhoodEmergencyMeetingPlaceState: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
   neighborhoodEmergencyMeetingPlaceZip: Yup.string(),
   neighborhoodEmergencyMeetingPlacePhone: Yup.string().max(14, '14 karakterden daha az uzunlukta olmalıdır.'),
   neighborhoodEmergencyMeetingPlaceInstructions: Yup.string().max(44, '44 karakterden daha az uzunlukta olmalıdır.'),
   outOfNeighborhoodEmergencyMeetingPlaceName: Yup.string().max(72, '72 karakterden daha az uzunlukta olmalıdır.'),
   outOfNeighborhoodEmergencyMeetingPlaceAddress: Yup.string().max(28, '28 karakterden daha az uzunlukta olmalıdır.'),
-  outOfNeighborhoodEmergencyMeetingPlaceState: Yup.string().length(2, 'Must be 2-letter State/Province abbreviation'),
+  outOfNeighborhoodEmergencyMeetingPlaceState: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
   outOfNeighborhoodEmergencyMeetingPlaceZip: Yup.string(),
   outOfNeighborhoodEmergencyMeetingPlacePhone: Yup.string().max(14, '14 karakterden daha az uzunlukta olmalıdır.'),
   outOfNeighborhoodEmergencyMeetingPlaceInstructions: Yup.string().max(44, '44 karakterden daha az uzunlukta olmalıdır.'),
   outOfTownEmergencyMeetingPlaceName: Yup.string().max(72, '72 karakterden daha az uzunlukta olmalıdır.'),
   outOfTownEmergencyMeetingPlaceAddress: Yup.string().max(28, '28 karakterden daha az uzunlukta olmalıdır.'),
-  outOfTownEmergencyMeetingPlaceState: Yup.string().length(2, 'Must be 2-letter State/Province abbreviation'),
+  outOfTownEmergencyMeetingPlaceState: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
   outOfTownEmergencyMeetingPlaceZip: Yup.string(),
   outOfTownEmergencyMeetingPlacePhone: Yup.string().max(14, '14 karakterden daha az uzunlukta olmalıdır.'),
   outOfTownEmergencyMeetingPlaceInstructions: Yup.string().max(44, '44 karakterden daha az uzunlukta olmalıdır.'),
@@ -130,9 +130,9 @@ export default function GetStarted() {
            <img className="w-80" src="https://res.cloudinary.com/wilrnh/image/upload/v1632264208/emergencywalletcards.com/ewc-color_ob4dsn.svg" alt="Emergency Wallet Cards Logo"/>
           </a>
         </Link>
-        <p className="mt-3 text-lg">Be ready before the next emergency</p>
-        <p className="p-4">Remember, no information is required so feel free to skip as many fields as you like.</p>
-        <p className="p-4">Then print the generated PDF on letter sized paper, cut and fold and safely keep it in your wallet or purse.</p>
+        <p className="mt-3 text-lg">Acil durumlara hazırlıklı olun</p>
+        <p className="p-4">Hiçbir bilgiyi doldurmak zorunlu değildir, sadece ihtiyacınız olanları doldurabilirsiniz.</p>
+        <p className="p-4">Oluşturulan PDFyi A4 kağıdına çıktı alın, kesin, katlayın ve cüzdanınızda saklayın.</p>
         <Formik
           initialValues = {{ 
             fullName: '',
