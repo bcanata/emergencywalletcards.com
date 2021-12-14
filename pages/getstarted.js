@@ -8,7 +8,7 @@ import { Accordion, AccordionItem, AccordionItemHeading, AccordionItemButton, Ac
 
 const formSchema = Yup.object().shape({
   fullName: Yup.string().max(50, '50 karakterden daha az uzunlukta olmalıdır.'),
-  dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYY şeklinde yazılmalıdır.'),
+  dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYYY şeklinde yazılmalıdır.'),
   address1: Yup.string().max(36, '36 karakterden daha az uzunlukta olmalıdır.'),
   address1State: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
   address1Zip: Yup.string(),
@@ -35,7 +35,7 @@ const formSchema = Yup.object().shape({
   workEmergencyPlan3: Yup.string().max(80, '80 karakterden daha az uzunlukta olmalıdır.'),
   workEmergencyPlan4: Yup.string().max(80, '80 karakterden daha az uzunlukta olmalıdır.'),
   child1Name: Yup.string().max(30, '30 karakterden daha az uzunlukta olmalıdır.'),
-  child1Dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYY şeklinde yazılmalıdır.'),
+  child1Dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYYY şeklinde yazılmalıdır.'),
   child1Sex: Yup.string().length(1, 'Tek harf şeklinde yazılmalıdır, ör. E, K, X.'),
   child1IdentifyingCharacteristics: Yup.string().max(54, '54 karakterden daha az uzunlukta olmalıdır.'),
   child1School: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
@@ -43,7 +43,7 @@ const formSchema = Yup.object().shape({
   child1SchoolPhone: Yup.string().max(22, '22 karakterden daha az uzunlukta olmalıdır.'),
   child1CellPhone: Yup.string().max(32, '32 karakterden daha az uzunlukta olmalıdır.'),
   child2Name: Yup.string().max(30, '30 karakterden daha az uzunlukta olmalıdır.'),
-  child2Dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYY şeklinde yazılmalıdır.'),
+  child2Dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYYY şeklinde yazılmalıdır.'),
   child2Sex: Yup.string().length(1, 'Tek harf şeklinde yazılmalıdır, ör. E, K, X.'),
   child2IdentifyingCharacteristics: Yup.string().max(54, '54 karakterden daha az uzunlukta olmalıdır.'),
   child2School: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
@@ -51,7 +51,7 @@ const formSchema = Yup.object().shape({
   child2SchoolPhone: Yup.string().max(22, '22 karakterden daha az uzunlukta olmalıdır.'),
   child2CellPhone: Yup.string().max(32, '32 karakterden daha az uzunlukta olmalıdır.'),
   child3Name: Yup.string().max(30, '30 karakterden daha az uzunlukta olmalıdır.'),
-  child3Dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYY şeklinde yazılmalıdır.'),
+  child3Dob: Yup.string().matches(/^[0-9]{2}-[0-9]{2}-[0-9]{4}$/, 'GG-AA-YYYY şeklinde yazılmalıdır.'),
   child3Sex: Yup.string().length(1, 'Tek harf şeklinde yazılmalıdır, ör. E, K, X.'),
   child3IdentifyingCharacteristics: Yup.string().max(54, '54 karakterden daha az uzunlukta olmalıdır.'),
   child3School: Yup.string().max(20, '20 karakterden daha az uzunlukta olmalıdır.'),
@@ -106,28 +106,28 @@ export default function GetStarted() {
   return(
     <div className="flex flex-col items-center justify-center min-h-screen py-2">
       <Head>
-        <title>Emergency Wallet Cards - Be ready before the next emergency</title>
+        <title>Acil Durum Cüzdan Kartları - Acil durumlara hazırlıklı olun</title>
         <link rel="icon" href="https://res.cloudinary.com/wilrnh/image/upload/v1632264854/emergencywalletcards.com/favicons/favicon_cv2eb0.ico" />
         <link rel="icon" type="image/png" sizes="32x32" href="https://res.cloudinary.com/wilrnh/image/upload/v1632264855/emergencywalletcards.com/favicons/favicon-32x32_tybret.png" />
         <link rel="icon" type="image/png" sizes="16x16" href="https://res.cloudinary.com/wilrnh/image/upload/v1632264855/emergencywalletcards.com/favicons/favicon-16x16_blucad.png" />
         <link rel="apple-touch-icon" href="https://res.cloudinary.com/wilrnh/image/upload/v1632264855/emergencywalletcards.com/favicons/apple-touch-icon-144x144_wrxg1f.png" />
-        <meta property="og:title" content="Emergency Wallet Cards - Be ready before the next emergency"/>
-        <meta property="og:site_name" content="Emergency Wallet Cards - Be ready before the next emergency"/>
-        <meta property="og:description" content="Generate a card with important information that you can print, cut out, and fold for safe-keeping in your wallet or purse, ready the moment you need it."/>
+        <meta property="og:title" content="Acil Durum Cüzdan Kartları - Acil durumlara hazırlıklı olun"/>
+        <meta property="og:site_name" content="Acil Durum Cüzdan Kartları - Acil durumlara hazırlıklı olun"/>
+        <meta property="og:description" content="Çıktısını alıp, cüzdanınızda saklamak üzere kesip katlayabileceğiniz, ihtiyacınız olduğunda hazır olacak bir kart oluşturun."/>
         <meta property="og:url" content="https://emergencywalletcards.com"/>
         <meta property="og:type" content="website"/>
         <meta property="og:image" content="https://res.cloudinary.com/wilrnh/image/upload/c_pad,h_630,w_1200/v1632264208/emergencywalletcards.com/ewc-color_l7fsin.png"/>
         <meta name="twitter:card" content="summary_large_image"/>
         <meta property="twitter:domain" content="emergencywalletcards.com"/>
         <meta property="twitter:url" content="https://emergencywalletcards.com"/>
-        <meta name="twitter:title" content="Emergency Wallet Cards - Be ready before the next emergency"/>
-        <meta name="twitter:description" content="Generate a card with important information that you can print, cut out, and fold for safe-keeping in your wallet or purse, ready the moment you need it."/>
+        <meta name="twitter:title" content="Acil Durum Cüzdan Kartları - Acil durumlara hazırlıklı olun"/>
+        <meta name="twitter:description" content="Çıktısını alıp, cüzdanınızda saklamak üzere kesip katlayabileceğiniz, ihtiyacınız olduğunda hazır olacak bir kart oluşturun."/>
         <meta name="twitter:image" content="https://res.cloudinary.com/wilrnh/image/upload/c_pad,h_630,w_1200/v1632264208/emergencywalletcards.com/ewc-color_l7fsin.png"/>
       </Head>
       <main className="flex flex-col items-center justify-center w-full flex-1 px-20 text-center">
         <Link href="/">
           <a>
-           <img className="w-80" src="https://res.cloudinary.com/wilrnh/image/upload/v1632264208/emergencywalletcards.com/ewc-color_ob4dsn.svg" alt="Emergency Wallet Cards Logo"/>
+           <img className="w-80" src="https://res.cloudinary.com/wilrnh/image/upload/v1632264208/emergencywalletcards.com/ewc-color_ob4dsn.svg" alt="Acil Durum Cüzdan Kartları Logo"/>
           </a>
         </Link>
         <p className="mt-3 text-lg">Acil durumlara hazırlıklı olun</p>
@@ -280,7 +280,7 @@ export default function GetStarted() {
             doc.setFont("Times","normal")
             doc.text(`${values.fullName}`, 72, 25)
             doc.setFont("Times","bold")
-            doc.text("DOB:", 120, 25);
+            doc.text("Doğum Tarihi:", 120, 25);
             doc.setFont("Times","normal")
             doc.text(`${values.dob}`,126,25)
             doc.line(65, 26, 140, 26)
@@ -311,7 +311,7 @@ export default function GetStarted() {
             doc.text(`${values.address2Zip}`, 125, 31)
             doc.line(65, 32, 140, 32)
             doc.setFont("Times","bold")
-            doc.text("Home Phone:", 65, 34);
+            doc.text("Ev Telefonu:", 65, 34);
             doc.setFont("Times","normal")
             doc.text(`${values.homePhone}`, 77, 34)
             doc.setFont("Times","bold")
@@ -320,7 +320,7 @@ export default function GetStarted() {
             doc.text(`${values.email}`, 107, 34)
             doc.line(65, 35, 140, 35)
             doc.setFont("Times","bold")
-            doc.text("Cell Phone:", 65, 37);
+            doc.text("Cep Telefonu:", 65, 37);
             doc.setFont("Times","normal")
             doc.text(`${values.cellPhone}`, 76, 37)
             doc.setFont("Times","bold")
@@ -360,12 +360,12 @@ export default function GetStarted() {
             doc.text(`${values.businessAddressZip}`,125,73)
             doc.line(65, 74, 140, 74)
             doc.setFont("Times","bold")
-            doc.text("Office Phone:", 65, 76);
+            doc.text("Ofis Telefonu:", 65, 76);
             doc.setFont("Times","normal")
             doc.text(`${values.officePhone}`,77,76)
             doc.line(65, 77, 140, 77)
             doc.setFont("Times","bold")
-            doc.text("Point of Contact/Special Instructions:", 65, 79);
+            doc.text("Ulaşılacak Kişi/Özel Talimatlar:", 65, 79);
             doc.setFont("Times","normal")
             doc.line(65,80,140,80)
             doc.text(`${values.workPointOfContact1}`,65,82)
@@ -391,7 +391,7 @@ export default function GetStarted() {
             doc.setFont("Times","normal")
             doc.text(`${values.child1Name}`, 72, 116)
             doc.setFont("Times","bold")
-            doc.text("DOB:", 100, 116)
+            doc.text("Doğum Tarihi:", 100, 116)
             doc.setFont("Times","normal")
             doc.text(`${values.child1Dob}`, 106, 116)
             doc.setFont("Times","bold")
@@ -400,12 +400,12 @@ export default function GetStarted() {
             doc.text(`${values.child1Sex}`,125,116)
             doc.line(65, 117, 140, 117)
             doc.setFont("Times","bold")
-            doc.text("Identifying Characteristics:", 65, 119);
+            doc.text("Tanınabilecek Özellikleri:", 65, 119);
             doc.setFont("Times","normal")
             doc.text(`${values.child1IdentifyingCharacteristics}`,89,119)
             doc.line(65, 120, 140, 120)
             doc.setFont("Times","bold")
-            doc.text("School/Daycare:", 65, 122);
+            doc.text("Okul/Kreş:", 65, 122);
             doc.setFont("Times","normal")
             doc.text(`${values.child1School}`, 80, 122)
             doc.setFont("Times","bold")
@@ -414,11 +414,11 @@ export default function GetStarted() {
             doc.text(`${values.child1SchoolAddress}`,108,122)
             doc.line(65, 123, 140, 123)
             doc.setFont("Times","bold")
-            doc.text("School Phone:", 65, 125);
+            doc.text("Okul Telefonu:", 65, 125);
             doc.setFont("Times","normal")
             doc.text(`${values.child1SchoolPhone}`, 78, 125)
             doc.setFont("Times","bold")
-            doc.text("Cell Phone:", 100, 125);
+            doc.text("Cep Telefonu:", 100, 125);
             doc.setFont("Times","normal")
             doc.text(`${values.child1CellPhone}`,110,125)
             doc.line(65, 126, 140, 126)
@@ -427,7 +427,7 @@ export default function GetStarted() {
             doc.setFont("Times","normal")
             doc.text(`${values.child2Name}`, 72, 128)
             doc.setFont("Times","bold")
-            doc.text("DOB:", 100, 128)
+            doc.text("Doğum Tarihi:", 100, 128)
             doc.setFont("Times","normal")
             doc.text(`${values.child2Dob}`, 106, 128)
             doc.setFont("Times","bold")
@@ -436,12 +436,12 @@ export default function GetStarted() {
             doc.text(`${values.child2Sex}`,125,128)
             doc.line(65, 129, 140, 129)
             doc.setFont("Times","bold")
-            doc.text("Identifying Characteristics:", 65, 131);
+            doc.text("Tanınabilecek Özellikleri:", 65, 131);
             doc.setFont("Times","normal")
             doc.text(`${values.child2IdentifyingCharacteristics}`,89,131)
             doc.line(65, 132, 140, 132)
             doc.setFont("Times","bold")
-            doc.text("School/Daycare:", 65, 134);
+            doc.text("Okul/Kreş:", 65, 134);
             doc.setFont("Times","normal")
             doc.text(`${values.child2School}`, 80, 134)
             doc.setFont("Times","bold")
@@ -450,11 +450,11 @@ export default function GetStarted() {
             doc.text(`${values.child2SchoolAddress}`,108,134)
             doc.line(65, 135, 140, 135)
             doc.setFont("Times","bold")
-            doc.text("School Phone:", 65, 137);
+            doc.text("Okul Telefonu:", 65, 137);
             doc.setFont("Times","normal")
             doc.text(`${values.child2SchoolPhone}`, 78, 137)
             doc.setFont("Times","bold")
-            doc.text("Cell Phone:", 100, 137);
+            doc.text("Cep Telefonu:", 100, 137);
             doc.setFont("Times","normal")
             doc.text(`${values.child2CellPhone}`,110,137)
             doc.line(65, 138, 140, 138)
@@ -463,7 +463,7 @@ export default function GetStarted() {
             doc.setFont("Times","normal")
             doc.text(`${values.child3Name}`, 72, 140)
             doc.setFont("Times","bold")
-            doc.text("DOB:", 100, 140)
+            doc.text("Doğum Tarihi:", 100, 140)
             doc.setFont("Times","normal")
             doc.text(`${values.child3Dob}`, 106, 140)
             doc.setFont("Times","bold")
@@ -472,12 +472,12 @@ export default function GetStarted() {
             doc.text(`${values.child3Sex}`,125,140)
             doc.line(65, 141, 140, 141)
             doc.setFont("Times","bold")
-            doc.text("Identifying Characteristics:", 65, 143);
+            doc.text("Tanınabilecek Özellikleri:", 65, 143);
             doc.setFont("Times","normal")
             doc.text(`${values.child3IdentifyingCharacteristics}`,89,143)
             doc.line(65, 144, 140, 144)
             doc.setFont("Times","bold")
-            doc.text("School/Daycare:", 65, 146);
+            doc.text("Okul/Kreş:", 65, 146);
             doc.setFont("Times","normal")
             doc.text(`${values.child3School}`, 80, 146)
             doc.setFont("Times","bold")
@@ -486,11 +486,11 @@ export default function GetStarted() {
             doc.text(`${values.child3SchoolAddress}`,108,146)
             doc.line(65, 147, 140, 147)
             doc.setFont("Times","bold")
-            doc.text("School Phone:", 65, 149);
+            doc.text("Okul Telefonu:", 65, 149);
             doc.setFont("Times","normal")
             doc.text(`${values.child3SchoolPhone}`, 78, 149)
             doc.setFont("Times","bold")
-            doc.text("Cell Phone:", 100, 149);
+            doc.text("Cep Telefonu:", 100, 149);
             doc.setFont("Times","normal")
             doc.text(`${values.child3CellPhone}`,110,149)
             doc.line(65,150,140,150)
@@ -519,7 +519,7 @@ export default function GetStarted() {
             doc.text(`${values.neighborhoodEmergencyMeetingPlacePhone}`,126,169)
             doc.line(65, 170, 140, 170)
             doc.setFont("Times","bold")
-            doc.text("Point of Contact/Special Instructions:", 65, 172);
+            doc.text("Ulaşılacak Kişi/Özel Talimatlar:", 65, 172);
             doc.setFont("Times","normal")
             doc.text(`${values.neighborhoodEmergencyMeetingPlaceInstructions}`,98,172)
             doc.line(65,173,140,173)
@@ -547,7 +547,7 @@ export default function GetStarted() {
             doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlacePhone}`,126,182)
             doc.line(65, 183, 140, 183)
             doc.setFont("Times","bold")
-            doc.text("Point of Contact/Special Instructions:", 65, 185);
+            doc.text("Ulaşılacak Kişi/Özel Talimatlar:", 65, 185);
             doc.setFont("Times","normal")
             doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceInstructions}`,98,185)
             doc.line(65,186,140,186)
@@ -575,7 +575,7 @@ export default function GetStarted() {
             doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlacePhone}`,126,195)
             doc.line(65, 196, 140, 196)
             doc.setFont("Times","bold")
-            doc.text("Point of Contact/Special Instructions:", 65, 198);
+            doc.text("Ulaşılacak Kişi/Özel Talimatlar:", 65, 198);
             doc.setFont("Times","normal")
             doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceInstructions}`,98,198)
             doc.line(65,199,140,199)
@@ -685,7 +685,7 @@ export default function GetStarted() {
             doc.text(`${values.petsVet}`,78,251)
             doc.line(65, 252, 140, 252)
             doc.setFont("Times","bold")
-            doc.text("DIAL 911 FOR EMERGENCIES", 105, 254, null, null, "center");
+            doc.text("ACİL DURUMLARDA 112'Yİ ARAYIN", 105, 254, null, null, "center");
             // spit out the card
             doc.save("Emergency Wallet Card" + (values.fullName ? ' for ' + values.fullName : ''))
             setSubmitting(false) // allow multiple submits
@@ -704,7 +704,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="fullName">
-                          Full Name
+                          Tam Adınız ve Soyadınız
                         </label>
                         <Field type="text" name="fullName" id="fullName" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" autoFocus={true}/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="fullName" component="div"/>
@@ -713,7 +713,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="dob">
-                          Date of Birth
+                          Doğum Tarihiniz
                         </label>
                         <Field type="date" name="dob" id="dob" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="dob" component="div"/>
@@ -722,7 +722,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="address1">
-                          Address (1)
+                          Adres (1)
                         </label>
                         <Field type="text" name="address1" id="address1" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="address1" component="div"/>
@@ -731,14 +731,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="address1State">
-                          State / Province
+                          Şehir
                         </label>
                         <Field type="text" name="address1State" id="address1State" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="address1State" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="address1Zip">
-                          ZIP / Postal Code
+                          Posta Kodu
                         </label>
                         <Field type="text" name="address1Zip" id="address1Zip" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="address1Zip" component="div"/>
@@ -747,7 +747,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="address2">
-                          Address (2)
+                          Adres (2)
                         </label>
                         <Field type="text" name="address2" id="address2" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="address2" component="div"/>
@@ -756,14 +756,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="address2State">
-                          State / Province
+                          Şehir
                         </label>
                         <Field type="text" name="address2State" id="address2State" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="address2State" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="address2Zip">
-                          ZIP / Postal Code
+                          Posta Kodu
                         </label>
                         <Field type="text" name="address2Zip" id="address2Zip" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="address2Zip" component="div"/>
@@ -772,14 +772,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="homePhone">
-                          Home Phone
+                          Ev Telefonu
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="tel" id="homePhone" name="homePhone"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="homePhone" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="cellPhone">
-                          Cell Phone
+                          Cep Telefonu
                         </label>
                         <Field type="tel" id="cellPhone" name="cellPhone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="cellPhone" component="div"/>
@@ -804,7 +804,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="information1">
-                          Information
+                          Bilgi
                         </label>
                         <Field type="text" name="information1" id="information1" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="information1" component="div"/>
@@ -833,14 +833,14 @@ export default function GetStarted() {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton className="w-full">
-                      <p className="font-bold">Work</p>
+                      <p className="font-bold">İş</p>
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="businessName">
-                          Business Name
+                          İş Yeri Adı
                         </label>
                         <Field type="text" name="businessName" id="businessName" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="businessName" component="div"/>
@@ -849,7 +849,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="businessAddress">
-                          Address (1)
+                          Adres (1)
                         </label>
                         <Field type="text" name="businessAddress" id="businessAddress" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="businessAddress" component="div"/>
@@ -858,14 +858,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="businessAddressState">
-                          State / Province
+                          Şehir
                         </label>
                         <Field type="text" name="businessAddressState" id="businessAddressState" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="businessAddressState" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="businessAddressZip">
-                          ZIP / Postal Code
+                          Posta Kodu
                         </label>
                         <Field type="text" name="businessAddressZip" id="businessAddressZip" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="businessAddressZip" component="div"/>
@@ -874,7 +874,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="officePhone">
-                          Office Phone
+                          Ofis Telefonu
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="tel" id="officePhone" name="officePhone"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="officePhone" component="div"/>
@@ -883,7 +883,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="workPointOfContact1">
-                          Point of Contact/Special Instructions:
+                          Aranacak Kişi/Özel Talimatlar:
                         </label>
                         <Field type="text" name="workPointOfContact1" id="workPointOfContact1" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="workPointOfContact1" component="div"/>
@@ -898,7 +898,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="workEmergencyPlan1">
-                          Work Emergency Plan:
+                          İş Acil Durum Planı:
                         </label>
                         <Field type="text" name="workEmergencyPlan1" id="workEmergencyPlan1" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="workEmergencyPlan1" component="div"/>
@@ -927,14 +927,14 @@ export default function GetStarted() {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton className="w-full">
-                      <p className="font-bold">Children</p>
+                      <p className="font-bold">Çocuklar:</p>
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child1Name">
-                          Full Name (1)
+                          Tam Adı - Soyadı (1)
                         </label>
                         <Field type="text" name="child1Name" id="child1Name" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child1Name" component="div"/>
@@ -943,14 +943,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child1Dob">
-                          DOB
+                          Doğum Tarihi
                         </label>
                         <Field type="date" name="child1Dob" id="child1Dob" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child1Dob" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child1Sex">
-                          Sex
+                          Cinsiyeti
                         </label>
                         <Field type="text" name="child1Sex" id="child1Sex" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child1Sex" component="div"/>
@@ -959,7 +959,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child1IdentifyingCharacteristics">
-                          Identifying Characteristics
+                          Tanınabilecek Özellikleri
                         </label>
                         <Field type="text" name="child1IdentifyingCharacteristics" id="child1IdentifyingCharacteristics" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child1IdentifyingCharacteristics" component="div"/>
@@ -968,7 +968,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child1School">
-                          School/Daycare
+                          Okul/Kreş
                         </label>
                         <Field type="text" name="child1School" id="child1School" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child1School" component="div"/>
@@ -977,7 +977,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child1SchoolAddress">
-                          Address
+                          Adres
                         </label>
                         <Field type="text" name="child1SchoolAddress" id="child1SchoolAddress" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child1SchoolAddress" component="div"/>
@@ -986,14 +986,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child1SchoolPhone">
-                          School Phone
+                          Okul Telefonu
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="tel" id="child1SchoolPhone" name="child1SchoolPhone"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="child1SchoolPhone" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child1CellPhone">
-                          Cell Phone
+                          Cep Telefonu
                         </label>
                         <Field type="tel" id="child1CellPhone" name="child1CellPhone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child1CellPhone" component="div"/>
@@ -1002,7 +1002,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child2Name">
-                          Full Name (2)
+                          Tam Adı - Soyadı (2)
                         </label>
                         <Field type="text" name="child2Name" id="child2Name" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child2Name" component="div"/>
@@ -1011,14 +1011,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child2Dob">
-                          DOB
+                          Doğum Tarihi
                         </label>
                         <Field type="date" name="child2Dob" id="child2Dob" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child2Dob" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child2Sex">
-                          Sex
+                          Cinsiyeti
                         </label>
                         <Field type="text" name="child2Sex" id="child2Sex" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child2Sex" component="div"/>
@@ -1027,7 +1027,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child2IdentifyingCharacteristics">
-                          Identifying Characteristics
+                          Tanınabilecek Özellikleri
                         </label>
                         <Field type="text" name="child2IdentifyingCharacteristics" id="child2IdentifyingCharacteristics" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child2IdentifyingCharacteristics" component="div"/>
@@ -1036,7 +1036,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child2School">
-                          School/Daycare
+                          Okul/Kreş
                         </label>
                         <Field type="text" name="child2School" id="child2School" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child2School" component="div"/>
@@ -1045,7 +1045,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child2SchoolAddress">
-                          Address
+                          Adres
                         </label>
                         <Field type="text" name="child2SchoolAddress" id="child2SchoolAddress" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child2SchoolAddress" component="div"/>
@@ -1054,14 +1054,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child2SchoolPhone">
-                          School Phone
+                          Okul Telefonu
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="tel" id="child2SchoolPhone" name="child2SchoolPhone"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="child2SchoolPhone" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child2CellPhone">
-                          Cell Phone
+                          Cep Telefonu
                         </label>
                         <Field type="tel" id="child2CellPhone" name="child2CellPhone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child2CellPhone" component="div"/>
@@ -1070,7 +1070,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child3Name">
-                          Full Name (3)
+                          Tam Adı - Soyadı (3)
                         </label>
                         <Field type="text" name="child3Name" id="child3Name" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child3Name" component="div"/>
@@ -1079,14 +1079,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child3Dob">
-                          DOB
+                          Doğum Tarihi
                         </label>
                         <Field type="date" name="child3Dob" id="child3Dob" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child3Dob" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child3Sex">
-                          Sex
+                          Cinsiyeti
                         </label>
                         <Field type="text" name="child3Sex" id="child3Sex" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child3Sex" component="div"/>
@@ -1095,7 +1095,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child3IdentifyingCharacteristics">
-                          Identifying Characteristics
+                          Tanınabilecek Özellikleri
                         </label>
                         <Field type="text" name="child3IdentifyingCharacteristics" id="child3IdentifyingCharacteristics" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child3IdentifyingCharacteristics" component="div"/>
@@ -1104,7 +1104,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child3School">
-                          School/Daycare
+                          Okul/Kreş
                         </label>
                         <Field type="text" name="child3School" id="child3School" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child3School" component="div"/>
@@ -1113,7 +1113,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child3SchoolAddress">
-                          Address
+                          Adres
                         </label>
                         <Field type="text" name="child3SchoolAddress" id="child3SchoolAddress" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child3SchoolAddress" component="div"/>
@@ -1122,14 +1122,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child3SchoolPhone">
-                          School Phone
+                          Okul Telefonu
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="tel" id="child3SchoolPhone" name="child3SchoolPhone"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="child3SchoolPhone" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child3CellPhone">
-                          Cell Phone
+                          Cep Telefonu
                         </label>
                         <Field type="tel" id="child3CellPhone" name="child3CellPhone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child3CellPhone" component="div"/>
@@ -1140,14 +1140,14 @@ export default function GetStarted() {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton className="w-full">
-                      <p className="font-bold">Neighborhood Emergency Meeting Place</p>
+                      <p className="font-bold">Mahalle Acil Durum Buluşma Yeri</p>
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="neighborhoodEmergencyMeetingPlaceName">
-                          Name
+                          Yer Adı
                         </label>
                         <Field type="text" name="neighborhoodEmergencyMeetingPlaceName" id="neighborhoodEmergencyMeetingPlaceName" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="neighborhoodEmergencyMeetingPlaceName" component="div"/>
@@ -1156,7 +1156,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="neighborhoodEmergencyMeetingPlaceAddress">
-                          Address
+                          Adresi
                         </label>
                         <Field type="text" name="neighborhoodEmergencyMeetingPlaceAddress" id="neighborhoodEmergencyMeetingPlaceAddress" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="neighborhoodEmergencyMeetingPlaceAddress" component="div"/>
@@ -1165,21 +1165,21 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="neighborhoodEmergencyMeetingPlaceState">
-                          State / Province
+                          Şehir
                         </label>
                         <Field type="text" name="neighborhoodEmergencyMeetingPlaceState" id="neighborhoodEmergencyMeetingPlaceState" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="neighborhoodEmergencyMeetingPlaceState" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="neighborhoodEmergencyMeetingPlaceZip">
-                          ZIP / Postal Code
+                          Posta Kodu
                         </label>
                         <Field type="text" name="neighborhoodEmergencyMeetingPlaceZip" id="neighborhoodEmergencyMeetingPlaceZip" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="neighborhoodEmergencyMeetingPlaceZip" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="neighborhoodEmergencyMeetingPlacePhone">
-                          Phone
+                          Telefon
                         </label>
                         <Field type="tel" name="neighborhoodEmergencyMeetingPlacePhone" id="neighborhoodEmergencyMeetingPlacePhone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="neighborhoodEmergencyMeetingPlacePhone" component="div"/>
@@ -1188,7 +1188,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="neighborhoodEmergencyMeetingPlaceInstructions">
-                          Point of Contact/Special Instructions
+                          Ulaşılacak Kişi/Özel Talimatlar
                         </label>
                         <Field type="text" name="neighborhoodEmergencyMeetingPlaceInstructions" id="neighborhoodEmergencyMeetingPlaceInstructions" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="neighborhoodEmergencyMeetingPlaceInstructions" component="div"/>
@@ -1199,14 +1199,14 @@ export default function GetStarted() {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton className="w-full">
-                      <p className="font-bold">Out of Neighborhood Emergency Meeting Place</p>
+                      <p className="font-bold">Mahalle Dışı Acil Durum Buluşma Alanı</p>
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfNeighborhoodEmergencyMeetingPlaceName">
-                          Name
+                          Yer Adı
                         </label>
                         <Field type="text" name="outOfNeighborhoodEmergencyMeetingPlaceName" id="outOfNeighborhoodEmergencyMeetingPlaceName" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfNeighborhoodEmergencyMeetingPlaceName" component="div"/>
@@ -1215,7 +1215,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfNeighborhoodEmergencyMeetingPlaceAddress">
-                          Address
+                          Adres
                         </label>
                         <Field type="text" name="outOfNeighborhoodEmergencyMeetingPlaceAddress" id="outOfNeighborhoodEmergencyMeetingPlaceAddress" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfNeighborhoodEmergencyMeetingPlaceAddress" component="div"/>
@@ -1224,21 +1224,21 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfNeighborhoodEmergencyMeetingPlaceState">
-                          State / Province
+                          Şehir
                         </label>
                         <Field type="text" name="outOfNeighborhoodEmergencyMeetingPlaceState" id="outOfNeighborhoodEmergencyMeetingPlaceState" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfNeighborhoodEmergencyMeetingPlaceState" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfNeighborhoodEmergencyMeetingPlaceZip">
-                          ZIP / Postal Code
+                          Posta Kodu
                         </label>
                         <Field type="text" name="outOfNeighborhoodEmergencyMeetingPlaceZip" id="outOfNeighborhoodEmergencyMeetingPlaceZip" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfNeighborhoodEmergencyMeetingPlaceZip" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfNeighborhoodEmergencyMeetingPlacePhone">
-                          Phone
+                          Telefon
                         </label>
                         <Field type="tel" name="outOfNeighborhoodEmergencyMeetingPlacePhone" id="outOfNeighborhoodEmergencyMeetingPlacePhone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfNeighborhoodEmergencyMeetingPlacePhone" component="div"/>
@@ -1247,7 +1247,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfNeighborhoodEmergencyMeetingPlaceInstructions">
-                          Point of Contact/Special Instructions
+                          Ulaşılacak Kişi/Özel Talimatlar
                         </label>
                         <Field type="text" name="outOfNeighborhoodEmergencyMeetingPlaceInstructions" id="outOfNeighborhoodEmergencyMeetingPlaceInstructions" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfNeighborhoodEmergencyMeetingPlaceInstructions" component="div"/>
@@ -1258,14 +1258,14 @@ export default function GetStarted() {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton className="w-full">
-                      <p className="font-bold">Out of Town Emergency Meeting Place</p>
+                      <p className="font-bold">Şehir Dışı Acil Durum Buluşma Alanı</p>
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfTownEmergencyMeetingPlaceName">
-                          Name
+                          Yer Adı
                         </label>
                         <Field type="text" name="outOfTownEmergencyMeetingPlaceName" id="outOfTownEmergencyMeetingPlaceName" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfTownEmergencyMeetingPlaceName" component="div"/>
@@ -1274,7 +1274,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfTownEmergencyMeetingPlaceAddress">
-                          Address
+                          Adres
                         </label>
                         <Field type="text" name="outOfTownEmergencyMeetingPlaceAddress" id="outOfTownEmergencyMeetingPlaceAddress" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfTownEmergencyMeetingPlaceAddress" component="div"/>
@@ -1283,21 +1283,21 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfTownEmergencyMeetingPlaceState">
-                          State / Province
+                          Şehir
                         </label>
                         <Field type="text" name="outOfTownEmergencyMeetingPlaceState" id="outOfTownEmergencyMeetingPlaceState" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfTownEmergencyMeetingPlaceState" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfTownEmergencyMeetingPlaceZip">
-                          ZIP / Postal Code
+                          Posta Kodu
                         </label>
                         <Field type="text" name="outOfTownEmergencyMeetingPlaceZip" id="outOfTownEmergencyMeetingPlaceZip" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfTownEmergencyMeetingPlaceZip" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfTownEmergencyMeetingPlacePhone">
-                          Phone
+                          Telefon
                         </label>
                         <Field type="tel" name="outOfTownEmergencyMeetingPlacePhone" id="outOfTownEmergencyMeetingPlacePhone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfTownEmergencyMeetingPlacePhone" component="div"/>
@@ -1306,7 +1306,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="outOfTownEmergencyMeetingPlaceInstructions">
-                          Point of Contact/Special Instructions
+                          Ulaşılacak Kişi/Özel Talimatlar
                         </label>
                         <Field type="text" name="outOfTownEmergencyMeetingPlaceInstructions" id="outOfTownEmergencyMeetingPlaceInstructions" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="outOfTownEmergencyMeetingPlaceInstructions" component="div"/>
@@ -1317,21 +1317,21 @@ export default function GetStarted() {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton className="w-full">
-                      <p className="font-bold">Important Numbers or Information</p>
+                      <p className="font-bold">Önemli Numaralar veya Bilgiler</p>
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers1Name">
-                          Name
+                          Ad
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" id="importantNumbers1Name" name="importantNumbers1Name"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers1Name" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers1Phone">
-                          Phone
+                          Telefon
                         </label>
                         <Field type="tel" id="importantNumbers1Phone" name="importantNumbers1Phone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers1Phone" component="div"/>
@@ -1340,14 +1340,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers2Name">
-                          Name
+                          Ad
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" id="importantNumbers2Name" name="importantNumbers2Name"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers2Name" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers2Phone">
-                          Phone
+                          Telefon
                         </label>
                         <Field type="tel" id="importantNumbers2Phone" name="importantNumbers2Phone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers2Phone" component="div"/>
@@ -1356,14 +1356,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers3Name">
-                          Name
+                          Ad
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" id="importantNumbers3Name" name="importantNumbers3Name"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers3Name" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers3Phone">
-                          Phone
+                          Telefon
                         </label>
                         <Field type="tel" id="importantNumbers3Phone" name="importantNumbers3Phone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers3Phone" component="div"/>
@@ -1372,14 +1372,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers4Name">
-                          Name
+                          Ad
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" id="importantNumbers4Name" name="importantNumbers4Name"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers4Name" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers4Phone">
-                          Phone
+                          Telefon
                         </label>
                         <Field type="tel" id="importantNumbers4Phone" name="importantNumbers4Phone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers4Phone" component="div"/>
@@ -1388,14 +1388,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers5Name">
-                          Name
+                          Ad
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" id="importantNumbers5Name" name="importantNumbers5Name"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers5Name" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers5Phone">
-                          Phone
+                          Telefon
                         </label>
                         <Field type="tel" id="importantNumbers5Phone" name="importantNumbers5Phone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers5Phone" component="div"/>
@@ -1404,14 +1404,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers6Name">
-                          Name
+                          Ad
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" id="importantNumbers6Name" name="importantNumbers6Name"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers6Name" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers6Phone">
-                          Phone
+                          Telefon
                         </label>
                         <Field type="tel" id="importantNumbers6Phone" name="importantNumbers6Phone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers6Phone" component="div"/>
@@ -1420,14 +1420,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers7Name">
-                          Name
+                          Ad
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" id="importantNumbers7Name" name="importantNumbers7Name"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers7Name" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers7Phone">
-                          Phone
+                          Telefon
                         </label>
                         <Field type="tel" id="importantNumbers7Phone" name="importantNumbers7Phone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers7Phone" component="div"/>
@@ -1436,14 +1436,14 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full md:w-1/2 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers8Name">
-                          Name
+                          Ad
                         </label>
                         <Field className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" type="text" id="importantNumbers8Name" name="importantNumbers8Name"/>
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers8Name" component="div"/>
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="importantNumbers8Phone">
-                          Phone
+                          Telefon
                         </label>
                         <Field type="tel" id="importantNumbers8Phone" name="importantNumbers8Phone" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="importantNumbers8Phone" component="div"/>
@@ -1454,28 +1454,28 @@ export default function GetStarted() {
                 <AccordionItem>
                   <AccordionItemHeading>
                     <AccordionItemButton className="w-full">
-                      <p className="font-bold">Pets</p>
+                      <p className="font-bold">Evcil Hayvanlar</p>
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="pets1Name">
-                          Name
+                          Adı
                         </label>
                         <Field type="text" name="pets1Name" id="pets1Name" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="pets1Name" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="pets1Type">
-                          Type
+                          Türü
                         </label>
                         <Field type="text" name="pets1Type" id="pets1Type" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="pets1Type" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="pets1Age">
-                          Age
+                          Yaşı
                         </label>
                         <Field type="number" name="pets1Age" id="pets1Age" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="pets1Age" component="div"/>
@@ -1484,21 +1484,21 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-2">
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="pets2Name">
-                          Name
+                          Adı
                         </label>
                         <Field type="text" name="pets2Name" id="pets2Name" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="pets2Name" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="pets2Type">
-                          Type
+                          Türü
                         </label>
                         <Field type="text" name="pets2Type" id="pets2Type" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="pets2Type" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="pets2Age">
-                          Age
+                          Yaşı
                         </label>
                         <Field type="number" name="pets2Age" id="pets2Age" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="pets2Age" component="div"/>
@@ -1507,7 +1507,7 @@ export default function GetStarted() {
                     <div className="flex flex-wrap -mx-3 mb-6">
                       <div className="w-full px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="petsVet">
-                          Veterinarian
+                          Veteriner
                         </label>
                         <Field type="text" name="petsVet" id="petsVet" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="petsVet" component="div"/>
@@ -1524,7 +1524,7 @@ export default function GetStarted() {
         </Formik>
       </main>
       <footer className="flex items-center justify-center w-full h-24 border-t">
-      <p>Copyright © William Hutson</p>
+      <p>Telif Hakkı © William Hutson - Türkçe Çeviri: Buğra CANATA</p>
       </footer>
       <script defer src='https://static.cloudflareinsights.com/beacon.min.js' data-cf-beacon='{"token": "267188447561463e9916408a83f261b2"}'></script>
     </div>
