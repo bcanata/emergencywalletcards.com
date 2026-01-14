@@ -386,8 +386,8 @@ export default function GetStarted() {
             doc.line(65,102,140,102)
             // card 3
             doc.setFont("Times","bold")
-            doc.text("Children",140,115,null,null,"right")
-            doc.text("Name:", 65, 116);
+            doc.text("Çocuklar",140,115,null,null,"right")
+            doc.text("Adı:", 65, 116);
             doc.setFont("Times","normal")
             doc.text(`${values.child1Name}`, 72, 116)
             doc.setFont("Times","bold")
@@ -395,7 +395,7 @@ export default function GetStarted() {
             doc.setFont("Times","normal")
             doc.text(`${values.child1Dob}`, 106, 116)
             doc.setFont("Times","bold")
-            doc.text("Sex:", 120, 116)
+            doc.text("Cinsiyet:", 120, 116)
             doc.setFont("Times","normal")
             doc.text(`${values.child1Sex}`,125,116)
             doc.line(65, 117, 140, 117)
@@ -409,7 +409,7 @@ export default function GetStarted() {
             doc.setFont("Times","normal")
             doc.text(`${values.child1School}`, 80, 122)
             doc.setFont("Times","bold")
-            doc.text("Address:", 100, 122)
+            doc.text("Adres:", 100, 122)
             doc.setFont("Times","normal")
             doc.text(`${values.child1SchoolAddress}`,108,122)
             doc.line(65, 123, 140, 123)
@@ -423,7 +423,7 @@ export default function GetStarted() {
             doc.text(`${values.child1CellPhone}`,110,125)
             doc.line(65, 126, 140, 126)
             doc.setFont("Times","bold")
-            doc.text("Name:", 65, 128);
+            doc.text("Adı:", 65, 128);
             doc.setFont("Times","normal")
             doc.text(`${values.child2Name}`, 72, 128)
             doc.setFont("Times","bold")
@@ -431,7 +431,7 @@ export default function GetStarted() {
             doc.setFont("Times","normal")
             doc.text(`${values.child2Dob}`, 106, 128)
             doc.setFont("Times","bold")
-            doc.text("Sex:", 120, 128)
+            doc.text("Cinsiyet:", 120, 128)
             doc.setFont("Times","normal")
             doc.text(`${values.child2Sex}`,125,128)
             doc.line(65, 129, 140, 129)
@@ -445,7 +445,7 @@ export default function GetStarted() {
             doc.setFont("Times","normal")
             doc.text(`${values.child2School}`, 80, 134)
             doc.setFont("Times","bold")
-            doc.text("Address:", 100, 134)
+            doc.text("Adres:", 100, 134)
             doc.setFont("Times","normal")
             doc.text(`${values.child2SchoolAddress}`,108,134)
             doc.line(65, 135, 140, 135)
@@ -459,7 +459,7 @@ export default function GetStarted() {
             doc.text(`${values.child2CellPhone}`,110,137)
             doc.line(65, 138, 140, 138)
             doc.setFont("Times","bold")
-            doc.text("Name:", 65, 140);
+            doc.text("Adı:", 65, 140);
             doc.setFont("Times","normal")
             doc.text(`${values.child3Name}`, 72, 140)
             doc.setFont("Times","bold")
@@ -467,7 +467,7 @@ export default function GetStarted() {
             doc.setFont("Times","normal")
             doc.text(`${values.child3Dob}`, 106, 140)
             doc.setFont("Times","bold")
-            doc.text("Sex:", 120, 140)
+            doc.text("Cinsiyet:", 120, 140)
             doc.setFont("Times","normal")
             doc.text(`${values.child3Sex}`,125,140)
             doc.line(65, 141, 140, 141)
@@ -481,7 +481,7 @@ export default function GetStarted() {
             doc.setFont("Times","normal")
             doc.text(`${values.child3School}`, 80, 146)
             doc.setFont("Times","bold")
-            doc.text("Address:", 100, 146)
+            doc.text("Adres:", 100, 146)
             doc.setFont("Times","normal")
             doc.text(`${values.child3SchoolAddress}`,108,146)
             doc.line(65, 147, 140, 147)
@@ -496,25 +496,25 @@ export default function GetStarted() {
             doc.line(65,150,140,150)
             // card 4
             doc.setFont("Times","bold")
-            doc.text("Neighborhood Emergency Meeting Place",140,165,null,null,"right")
-            doc.text("Name:", 65, 166);
+            doc.text("Mahalle Acil Toplanma Yeri",140,165,null,null,"right")
+            doc.text("Adı:", 65, 166);
             doc.setFont("Times","normal")
             doc.text(`${values.neighborhoodEmergencyMeetingPlaceName}`,72,166)
             doc.line(65, 167, 140, 167)
             doc.setFont("Times","bold")
-            doc.text("Address:", 65, 169);
+            doc.text("Adres:", 65, 169);
             doc.setFont("Times","normal")
             doc.text(`${values.neighborhoodEmergencyMeetingPlaceAddress}`, 73, 169)
             doc.setFont("Times","bold")
-            doc.text("State:", 100, 169)
+            doc.text("Şehir:", 100, 169)
             doc.setFont("Times","normal")
             doc.text(`${values.neighborhoodEmergencyMeetingPlaceState}`, 105, 169)
             doc.setFont("Times","bold")
-            doc.text("ZIP:", 110, 169)
+            doc.text("Posta Kodu:", 110, 169)
             doc.setFont("Times","normal")
             doc.text(`${values.neighborhoodEmergencyMeetingPlaceZip}`, 115, 169)
             doc.setFont("Times","bold")
-            doc.text("Phone:", 120, 169)
+            doc.text("Telefon:", 120, 169)
             doc.setFont("Times","normal")
             doc.text(`${values.neighborhoodEmergencyMeetingPlacePhone}`,126,169)
             doc.line(65, 170, 140, 170)
@@ -524,25 +524,25 @@ export default function GetStarted() {
             doc.text(`${values.neighborhoodEmergencyMeetingPlaceInstructions}`,98,172)
             doc.line(65,173,140,173)
             doc.setFont("Times","bold")
-            doc.text("Out of Neighborhood Emergency Meeting Place",140,178,null,null,"right")
-            doc.text("Name:", 65, 179);
+            doc.text("Mahalle Dışı Acil Toplanma Yeri",140,178,null,null,"right")
+            doc.text("Adı:", 65, 179);
             doc.setFont("Times","normal")
             doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceName}`,72,179)
             doc.line(65, 180, 140, 180)
             doc.setFont("Times","bold")
-            doc.text("Address:", 65, 182);
+            doc.text("Adres:", 65, 182);
             doc.setFont("Times","normal")
             doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceAddress}`, 73, 182)
             doc.setFont("Times","bold")
-            doc.text("State:", 100, 182)
+            doc.text("Şehir:", 100, 182)
             doc.setFont("Times","normal")
             doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceState}`, 105, 182)
             doc.setFont("Times","bold")
-            doc.text("ZIP:", 110, 182)
+            doc.text("Posta Kodu:", 110, 182)
             doc.setFont("Times","normal")
             doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceZip}`, 115, 182)
             doc.setFont("Times","bold")
-            doc.text("Phone:", 120, 182)
+            doc.text("Telefon:", 120, 182)
             doc.setFont("Times","normal")
             doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlacePhone}`,126,182)
             doc.line(65, 183, 140, 183)
@@ -552,142 +552,142 @@ export default function GetStarted() {
             doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceInstructions}`,98,185)
             doc.line(65,186,140,186)
             doc.setFont("Times","bold")
-            doc.text("Out of Town Emergency Meeting Place",140,191,null,null,"right")
-            doc.text("Name:", 65, 192);
+            doc.text("Şehir Dışı Acil Toplanma Yeri",140,191,null,null,"right")
+            doc.text("Adı:", 65, 192);
             doc.setFont("Times","normal")
-            doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceName}`,72,192)
+            doc.text(`${values.outOfTownEmergencyMeetingPlaceName}`,72,192)
             doc.line(65, 193, 140, 193)
             doc.setFont("Times","bold")
-            doc.text("Address:", 65, 195);
+            doc.text("Adres:", 65, 195);
             doc.setFont("Times","normal")
-            doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceAddress}`, 73, 195)
+            doc.text(`${values.outOfTownEmergencyMeetingPlaceAddress}`, 73, 195)
             doc.setFont("Times","bold")
-            doc.text("State:", 100, 195)
+            doc.text("Şehir:", 100, 195)
             doc.setFont("Times","normal")
-            doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceState}`, 105, 195)
+            doc.text(`${values.outOfTownEmergencyMeetingPlaceState}`, 105, 195)
             doc.setFont("Times","bold")
-            doc.text("ZIP:", 110, 195)
+            doc.text("Posta Kodu:", 110, 195)
             doc.setFont("Times","normal")
-            doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceZip}`, 115, 195)
+            doc.text(`${values.outOfTownEmergencyMeetingPlaceZip}`, 115, 195)
             doc.setFont("Times","bold")
-            doc.text("Phone:", 120, 195)
+            doc.text("Telefon:", 120, 195)
             doc.setFont("Times","normal")
-            doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlacePhone}`,126,195)
+            doc.text(`${values.outOfTownEmergencyMeetingPlacePhone}`,126,195)
             doc.line(65, 196, 140, 196)
             doc.setFont("Times","bold")
-            doc.text("Ulaşılacak Kişi/Özel Talimatlar:", 65, 198);
+            doc.text("Özel Talimatlar:", 65, 198);
             doc.setFont("Times","normal")
-            doc.text(`${values.outOfNeighborhoodEmergencyMeetingPlaceInstructions}`,98,198)
+            doc.text(`${values.outOfTownEmergencyMeetingPlaceInstructions}`,98,198)
             doc.line(65,199,140,199)
             // card 5
             doc.setFont("Times","bold")
-            doc.text("Important Numbers or Information",140,215,null,null,"right")
-            doc.text("Name:", 65, 218);
+            doc.text("Önemli Telefonlar veya Bilgiler",140,215,null,null,"right")
+            doc.text("Adı:", 65, 218);
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers1Name}`, 71, 218)
             doc.setFont("Times","bold")
-            doc.text("Phone:", 100, 218)
+            doc.text("Telefon:", 100, 218)
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers1Phone}`,108,218)
             doc.line(65, 219, 140, 219)
             doc.setFont("Times","bold")
-            doc.text("Name:", 65, 221);
+            doc.text("Adı:", 65, 221);
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers2Name}`, 71, 221)
             doc.setFont("Times","bold")
-            doc.text("Phone:", 100, 221)
+            doc.text("Telefon:", 100, 221)
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers2Phone}`,108,221)
             doc.line(65, 222, 140, 222)
             doc.setFont("Times","bold")
-            doc.text("Name:", 65, 224);
+            doc.text("Adı:", 65, 224);
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers3Name}`, 71, 224)
             doc.setFont("Times","bold")
-            doc.text("Phone:", 100, 224)
+            doc.text("Telefon:", 100, 224)
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers3Phone}`,108,224)
             doc.line(65, 225, 140, 225)
             doc.setFont("Times","bold")
-            doc.text("Name:", 65, 227);
+            doc.text("Adı:", 65, 227);
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers4Name}`, 71, 227)
             doc.setFont("Times","bold")
-            doc.text("Phone:", 100, 227)
+            doc.text("Telefon:", 100, 227)
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers4Phone}`,108,227)
             doc.line(65, 228, 140, 228)
             doc.setFont("Times","bold")
-            doc.text("Name:", 65, 230);
+            doc.text("Adı:", 65, 230);
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers5Name}`, 71, 230)
             doc.setFont("Times","bold")
-            doc.text("Phone:", 100, 230)
+            doc.text("Telefon:", 100, 230)
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers5Phone}`,108,230)
             doc.line(65, 231, 140, 231)
             doc.setFont("Times","bold")
-            doc.text("Name:", 65, 233);
+            doc.text("Adı:", 65, 233);
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers6Name}`, 71, 233)
             doc.setFont("Times","bold")
-            doc.text("Phone:", 100, 233)
+            doc.text("Telefon:", 100, 233)
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers6Phone}`,108,233)
             doc.line(65, 234, 140, 234)
             doc.setFont("Times","bold")
-            doc.text("Name:", 65, 236);
+            doc.text("Adı:", 65, 236);
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers7Name}`, 71, 236)
             doc.setFont("Times","bold")
-            doc.text("Phone:", 100, 236)
+            doc.text("Telefon:", 100, 236)
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers7Phone}`,108,236)
             doc.line(65, 237, 140, 237)
             doc.setFont("Times","bold")
-            doc.text("Name:", 65, 239);
+            doc.text("Adı:", 65, 239);
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers8Name}`, 71, 239)
             doc.setFont("Times","bold")
-            doc.text("Phone:", 100, 239)
+            doc.text("Telefon:", 100, 239)
             doc.setFont("Times","normal")
             doc.text(`${values.importantNumbers8Phone}`,108,239)
             doc.setFont("Times","bold")
-            doc.text("Pets",140,242,null,null,"right")
-            doc.text("Name:", 65, 245);
+            doc.text("Evcil Hayvanlar",140,242,null,null,"right")
+            doc.text("Adı:", 65, 245);
             doc.setFont("Times","normal")
             doc.text(`${values.pets1Name}`, 71, 245)
             doc.setFont("Times","bold")
-            doc.text("Type:", 100, 245)
+            doc.text("Türü:", 100, 245)
             doc.setFont("Times","normal")
             doc.text(`${values.pets1Type}`, 105, 245)
             doc.setFont("Times","bold")
-            doc.text("Age:", 125, 245)
+            doc.text("Yaşı:", 125, 245)
             doc.setFont("Times","normal")
             doc.text(`${values.pets1Age}`,130,245)
             doc.line(65, 246, 140, 246)
             doc.setFont("Times","bold")
-            doc.text("Name:", 65, 248);
+            doc.text("Adı:", 65, 248);
             doc.setFont("Times","normal")
             doc.text(`${values.pets2Name}`, 71, 248)
             doc.setFont("Times","bold")
-            doc.text("Type:", 100, 248)
+            doc.text("Türü:", 100, 248)
             doc.setFont("Times","normal")
             doc.text(`${values.pets2Type}`, 105, 248)
             doc.setFont("Times","bold")
-            doc.text("Age:", 125, 248)
+            doc.text("Yaşı:", 125, 248)
             doc.setFont("Times","normal")
             doc.text(`${values.pets2Age}`,130,248)
             doc.line(65, 249, 140, 249)
             doc.setFont("Times","bold")
-            doc.text("Veterinarian:", 65, 251)
+            doc.text("Veteriner:", 65, 251)
             doc.setFont("Times","normal")
             doc.text(`${values.petsVet}`,78,251)
             doc.line(65, 252, 140, 252)
             doc.setFont("Times","bold")
             doc.text("ACİL DURUMLARDA 112'Yİ ARAYIN", 105, 254, null, null, "center");
             // spit out the card
-            doc.save("Emergency Wallet Card" + (values.fullName ? ' for ' + values.fullName : ''))
+            doc.save("Acil Durum Cüzdan Kartı" + (values.fullName ? ' için ' + values.fullName : ''))
             setSubmitting(false) // allow multiple submits
           }}
         >
@@ -697,7 +697,7 @@ export default function GetStarted() {
                 <AccordionItem uuid={"personal-info"}>
                   <AccordionItemHeading>
                     <AccordionItemButton className="w-full">
-                      <p className="font-bold">Personal Info</p>
+                      <p className="font-bold">Kişisel Bilgiler</p>
                     </AccordionItemButton>
                   </AccordionItemHeading>
                   <AccordionItemPanel>
@@ -795,7 +795,7 @@ export default function GetStarted() {
                       </div>
                       <div className="w-full md:w-1/2 px-3">
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="otherEmail">
-                          Other Email
+                          Diğer Email
                         </label>
                         <Field type="email" id="otherEmail" name="otherEmail" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="otherEmail" component="div"/>
@@ -1517,7 +1517,7 @@ export default function GetStarted() {
                 </AccordionItem>
               </Accordion>
               
-              <button type="submit" disabled={ isSubmitting } className="border-4 rounded-lg border-red-400 bg-white p-1 text-black font-bold" >Print My Emergency Wallet Card</button>
+              <button type="submit" disabled={ isSubmitting } className="border-4 rounded-lg border-red-400 bg-white p-1 text-black font-bold" >Acil Durum Cüzdan Kartımı Yazdır</button>
 
             </Form>
           )}
