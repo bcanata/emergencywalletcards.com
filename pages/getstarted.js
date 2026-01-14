@@ -715,7 +715,7 @@ export default function GetStarted() {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="dob">
                           Doğum Tarihiniz
                         </label>
-                        <Field type="date" name="dob" id="dob" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
+                        <Field type="text" name="dob" id="dob" placeholder="GG/AA/YYYY" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="dob" component="div"/>
                       </div>
                     </div>
@@ -945,7 +945,7 @@ export default function GetStarted() {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child1Dob">
                           Doğum Tarihi
                         </label>
-                        <Field type="date" name="child1Dob" id="child1Dob" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
+                        <Field type="text" name="child1Dob" id="child1Dob" placeholder="GG/AA/YYYY" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child1Dob" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -1013,7 +1013,7 @@ export default function GetStarted() {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child2Dob">
                           Doğum Tarihi
                         </label>
-                        <Field type="date" name="child2Dob" id="child2Dob" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
+                        <Field type="text" name="child2Dob" id="child2Dob" placeholder="GG/AA/YYYY" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child2Dob" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
@@ -1081,7 +1081,7 @@ export default function GetStarted() {
                         <label className="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2" htmlFor="child3Dob">
                           Doğum Tarihi
                         </label>
-                        <Field type="date" name="child3Dob" id="child3Dob" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
+                        <Field type="text" name="child3Dob" id="child3Dob" placeholder="GG/AA/YYYY" className="appearance-none block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500" />
                         <ErrorMessage className="text-red-500 text-xs italic" name="child3Dob" component="div"/>
                       </div>
                       <div className="w-full md:w-1/3 px-3 mb-6 md:mb-0">
